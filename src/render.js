@@ -3,7 +3,7 @@ window.addEventListener('load', function() {
   const fs = require('fs')
   const { remote } = require('electron')
 
-  let diagram_source_path = remote.process.argv[2]
+  let diagram_source_path = remote.process.argv[remote.process.argv.length - 1]
   let canvas = document.getElementById('target')
 
   function render_diagram() {
